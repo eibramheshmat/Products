@@ -8,6 +8,26 @@
 
 import Foundation
 
-class MainViewModel: BaseViewModel {
+class MainListViewModel: BaseViewModel {
     
+    var getDataObserver: (()->())?
+    var repository = MainListRepositroy()
+    var productData = ProductsModel(){
+        didSet{
+            getDataObserver?()
+        }
+    }
+    
+    func getData(){
+        setObserveListener()
+        repository.getDataFromRemote()
+    }
+    
+    func setObserveListener() {
+        repository.getRemoteDataObserve = { [weak self] (result) in
+            if let data = result.data{
+                self?.productData = data
+            }
+        }
+    }
 }

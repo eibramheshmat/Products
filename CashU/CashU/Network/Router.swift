@@ -9,7 +9,7 @@
 import Foundation
 
 enum Router {
-    case getMovieImages(movieName: String)
+    case getProductsData
     
     private static let baseURLString = Bundle.main.baseURL
     
@@ -31,32 +31,19 @@ enum Router {
     
     private var method: HTTPMethod {
         switch self {
-        case .getMovieImages: return .get
+        case .getProductsData: return .get
         }
     }
     
     private var path: String {
         switch self {
-        case .getMovieImages:
+        case .getProductsData:
             return ""
         }
     }
     
-    private var params: [String:Any] {
-        switch self {
-        case .getMovieImages(let movieName):
-            let paramsData = PhotoRequestParams(apiKey: Bundle.main.appKey, method: "flickr.photos.search", format: "json", nojsoncallback: "1",text: movieName+" movie")
-            return paramsData.dictionary ?? [:]
-        }
-    }
-    
     func request() throws -> URLRequest {
-        var urlString = ""
-        if method.value == "GET"{
-            urlString = "\(Router.baseURLString)\(path)?\(params.queryString.replacingOccurrences(of: " ", with: "%20"))"
-        }else{
-            urlString = "\(Router.baseURLString)\(path)"
-        }
+        let urlString = "\(Router.baseURLString)\(path)"
         
         guard let url = URL(string: urlString) else {
             throw ErrorType.parseUrlFail
@@ -67,7 +54,7 @@ enum Router {
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
         switch self {
-        case .getMovieImages:
+        case .getProductsData:
             return request
         }
     }
