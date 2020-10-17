@@ -8,15 +8,42 @@
 
 import Foundation
 
-struct PhotoRequestParams: Codable{
-    var apiKey: String
-    var method: String
-    var format: String
-    var nojsoncallback: String
-    var text: String
+struct ProductsModel: Codable {
+    var data = ProductsData()
+}
+
+struct ProductsData: Codable {
+    var products = [ProductsObjects]()
+}
+
+struct ProductsObjects: Codable {
+    var id: Int?
+    var nameAr: String?
+    var nameEn: String?
+    var descriptionAr: String?
+    var descriptionEn: String?
+    var Links = [ProductLinks]()
     
-    enum CodingKeys: String , CodingKey {
-        case apiKey = "api_key"
-        case method, format, nojsoncallback, text
+    enum CodingKeys: String, CodingKey {
+        case nameAr = "name_ar"
+        case nameEn = "name_en"
+        case descriptionAr = "description_ar"
+        case descriptionEn = "description_en"
+        case id, Links
     }
+}
+
+struct ProductLinks: Codable {
+    var linkType: String?
+    var link: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case linkType = "link_type"
+        case link
+    }
+}
+
+struct Response<T> {
+    var data: T?
+    var error: String?
 }

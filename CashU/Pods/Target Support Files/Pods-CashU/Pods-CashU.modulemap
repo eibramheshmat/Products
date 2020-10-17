@@ -1,0 +1,6 @@
+framework module Pods_CashU {
+  umbrella header "Pods-CashU-umbrella.h"
+
+  export *
+  module * { export * }
+}
