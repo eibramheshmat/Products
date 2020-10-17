@@ -10,20 +10,21 @@ import UIKit
 import Kingfisher
 
 class MainListTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var productName: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
-    func setData(productInfo: ProductsObjects){
-        productName.text = productInfo.nameEn
-        if productInfo.Links.count > 0{
-            guard let imageURL = productInfo.Links[0].link else {return}
-            productImage.kf.setImage(with: URL(string: imageURL))
+    func setData(productInfo: ProductCash){
+        productName.text = productInfo.name
+        let imageURL = productInfo.image?.isEmpty ?? true ? "" : productInfo.image
+        if imageURL == "noImage" {
+            productImage.image = UIImage(named: "nodata")
+        }else{
+            productImage.kf.setImage(with: URL(string: imageURL ?? ""))
         }
     }
     

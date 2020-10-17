@@ -12,18 +12,18 @@ class MainListViewModel: BaseViewModel {
     
     var getDataObserver: (()->())?
     var repository = MainListRepositroy()
-    var productData = ProductsModel(){
+    var productData = [ProductCash](){
         didSet{
             getDataObserver?()
         }
     }
     
-    func getData(){
+    func getData(needRefresh: Bool){
         setObserveListener()
-        repository.getDataFromRemote()
+        repository.getDataFromRemote(needRefresh: needRefresh)
     }
     
-    func setObserveListener() {
+    private func setObserveListener() {
         repository.getRemoteDataObserve = { [weak self] (result) in
             if let data = result.data{
                 self?.productData = data

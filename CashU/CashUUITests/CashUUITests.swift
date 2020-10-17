@@ -23,13 +23,11 @@ class CashUUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // UI tests must launch the application that they test.
+    func testAlert() throws {
         let app = XCUIApplication()
         app.launch()
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        app.tables.children(matching: .cell).element(boundBy: 0).staticTexts["Samsung Galaxy S10"].tap()
+        app.alerts["Description"].scrollViews.otherElements.buttons["Ok"].tap()
     }
 
     func testLaunchPerformance() throws {

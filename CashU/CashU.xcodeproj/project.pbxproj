@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -29,6 +29,8 @@
 		043EBEA62535EA5F005104C0 /* MainListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043EBEA52535EA5F005104C0 /* MainListViewModel.swift */; };
 		043EBEA92535ECAD005104C0 /* MainListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043EBEA72535ECAD005104C0 /* MainListTableViewCell.swift */; };
 		043EBEAA2535ECAD005104C0 /* MainListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043EBEA82535ECAD005104C0 /* MainListTableViewCell.xib */; };
+		043F3262253881A300CB1103 /* ResizableTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F3261253881A300CB1103 /* ResizableTableView.swift */; };
+		043F3266253887D400CB1103 /* AnimationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F3265253887D400CB1103 /* AnimationFactory.swift */; };
 		6BAA80072DCEE65495DEE7DB /* Pods_CashU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B08AB669A7EF9F39B23C977A /* Pods_CashU.framework */; };
 		8978D3A74F32752D1700338A /* Pods_CashUTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E88455ECABC23A4B7880AC04 /* Pods_CashUTests.framework */; };
 		D775DD5D58D72A86271B492B /* Pods_CashU_CashUUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 154D1F209DF074A4E7A7E691 /* Pods_CashU_CashUUITests.framework */; };
@@ -81,6 +83,8 @@
 		043EBEA52535EA5F005104C0 /* MainListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListViewModel.swift; sourceTree = "<group>"; };
 		043EBEA72535ECAD005104C0 /* MainListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListTableViewCell.swift; sourceTree = "<group>"; };
 		043EBEA82535ECAD005104C0 /* MainListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainListTableViewCell.xib; sourceTree = "<group>"; };
+		043F3261253881A300CB1103 /* ResizableTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizableTableView.swift; sourceTree = "<group>"; };
+		043F3265253887D400CB1103 /* AnimationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationFactory.swift; sourceTree = "<group>"; };
 		154D1F209DF074A4E7A7E691 /* Pods_CashU_CashUUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CashU_CashUUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		16BBE02D8A8A66F21909D0AB /* Pods-CashU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CashU.debug.xcconfig"; path = "Target Support Files/Pods-CashU/Pods-CashU.debug.xcconfig"; sourceTree = "<group>"; };
 		3BF6C62B16E7E91DBCC12A41 /* Pods-CashUTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CashUTests.release.xcconfig"; path = "Target Support Files/Pods-CashUTests/Pods-CashUTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -284,8 +288,10 @@
 		043EBE8E2535E649005104C0 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				043F3261253881A300CB1103 /* ResizableTableView.swift */,
 				043EBE9A2535E6AD005104C0 /* Extensions.swift */,
 				043EBE992535E6AD005104C0 /* LoadingView.swift */,
+				043F3265253887D400CB1103 /* AnimationFactory.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -327,7 +333,6 @@
 				CD63402D0443487EDF8BA9D5 /* Pods-CashUTests.debug.xcconfig */,
 				3BF6C62B16E7E91DBCC12A41 /* Pods-CashUTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -578,10 +583,12 @@
 				043EBEA62535EA5F005104C0 /* MainListViewModel.swift in Sources */,
 				043EBE972535E692005104C0 /* Router.swift in Sources */,
 				043EBEA02535E998005104C0 /* BaseViewController.swift in Sources */,
+				043F3262253881A300CB1103 /* ResizableTableView.swift in Sources */,
 				043EBE9C2535E6AD005104C0 /* Extensions.swift in Sources */,
 				043EBEA22535E9B7005104C0 /* BaseViewModel.swift in Sources */,
 				043EBE5A2535E4EF005104C0 /* CashU.xcdatamodeld in Sources */,
 				043EBEA92535ECAD005104C0 /* MainListTableViewCell.swift in Sources */,
+				043F3266253887D400CB1103 /* AnimationFactory.swift in Sources */,
 				043EBE962535E692005104C0 /* ErrorType.swift in Sources */,
 				043EBE522535E4EF005104C0 /* SceneDelegate.swift in Sources */,
 				043EBE9B2535E6AD005104C0 /* LoadingView.swift in Sources */,

@@ -8,7 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainListTableViewCell" rowHeight="184" id="KGk-i7-Jjw" customClass="MainListTableViewCell" customModule="CashU" customModuleProvider="target">
+        <tableViewCell contentMode="scaleAspectFit" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainListTableViewCell" rowHeight="184" id="KGk-i7-Jjw" customClass="MainListTableViewCell" customModule="CashU" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="390" height="184"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -16,14 +16,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qsJ-mK-uV4">
-                        <rect key="frame" x="10" y="42" width="150" height="100"/>
+                        <rect key="frame" x="10" y="42" width="100" height="100"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="100" id="5Ri-1b-gFx"/>
-                            <constraint firstAttribute="width" constant="150" id="g2w-32-rQd"/>
+                            <constraint firstAttribute="width" constant="100" id="g2w-32-rQd"/>
+                            <constraint firstAttribute="height" constant="100" id="sTk-yY-9gY"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O6E-44-Rbh">
-                        <rect key="frame" x="170" y="10" width="210" height="164"/>
+                        <rect key="frame" x="120" y="10" width="260" height="164"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -31,11 +31,12 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="O6E-44-Rbh" firstAttribute="leading" secondItem="qsJ-mK-uV4" secondAttribute="trailing" constant="10" id="0ax-V6-y32"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="qsJ-mK-uV4" secondAttribute="bottom" constant="10" id="Fit-LH-Rmu"/>
                     <constraint firstItem="O6E-44-Rbh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="IW1-dJ-Zpu"/>
+                    <constraint firstItem="qsJ-mK-uV4" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Ow1-ng-Zv8"/>
                     <constraint firstAttribute="bottom" secondItem="O6E-44-Rbh" secondAttribute="bottom" constant="10" id="fYb-px-IOD"/>
                     <constraint firstItem="qsJ-mK-uV4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="jpy-AA-ztn"/>
                     <constraint firstAttribute="trailing" secondItem="O6E-44-Rbh" secondAttribute="trailing" constant="10" id="vLD-Pc-XpQ"/>
-                    <constraint firstItem="qsJ-mK-uV4" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="wAo-01-9CU"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
