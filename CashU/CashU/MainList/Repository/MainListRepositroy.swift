@@ -73,7 +73,6 @@ class MainListRepositroy {
             UIApplication.shared.delegate as? AppDelegate else {
                 return
         }
-        print(id, name, image, decrip)
         let managmentContext = appDelegate.persistentContainer.viewContext
         let product = NSEntityDescription.insertNewObject(forEntityName: "ProductCash", into: managmentContext)
         product.setValue(id, forKey: "id")
